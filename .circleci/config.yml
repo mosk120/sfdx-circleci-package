@@ -9,7 +9,7 @@ jobs:
     - PACKAGENAME: "0Ho5g000000GmxYCAS"
     - TESTLEVEL: RunLocalTests
     steps: 
-      - checkout
+#      - checkout
 #      - run:
 #          name: "Create SFDX Folder"
 #          command: |
