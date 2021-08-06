@@ -85,3 +85,4 @@ jobs:
           command: |
             #Delete scratch org
             sfdx force:org:delete --targetusername installorg --noprompt
+            ##new commit
