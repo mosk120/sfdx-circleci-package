@@ -4,10 +4,10 @@ jobs:
     docker:
       - image: cimg/node:lts
     environment:
-      # from https://developer.salesforce.com/tools/sfdxcli
-      - DX_CLI_URL: https://developer.salesforce.com/media/salesforce-cli/sfdx/channels/stable/sfdx-linux-x64.tar.xz
-      - PACKAGENAME: "0Ho0N000000CaT8SAK"
-      - TESTLEVEL: RunLocalTests
+    # from https://developer.salesforce.com/tools/sfdxcli
+    - DX_CLI_URL: https://developer.salesforce.com/media/salesforce-cli/sfdx/channels/stable/sfdx-linux-x64.tar.xz
+    - PACKAGENAME: "0Ho5g000000GmxYCAS"
+    - TESTLEVEL: RunLocalTests
     steps:
       - checkout
       - run:
@@ -19,7 +19,6 @@ jobs:
           name: Download CLI
           command: |
             # Create sfdx directory
-            mkdir sfdx
             # Download Salesforce CLI
             wget -qO- ${DX_CLI_URL_CUSTOM-$DX_CLI_URL} | tar xJ -C ~/sfdx --strip-components 1
       - run:
