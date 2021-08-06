@@ -18,8 +18,8 @@ jobs:
       - run:
           name: Download CLI
           command: |
-            # Create sfdx directory
-            mkdir sfdx
+#            # Create sfdx directory
+#            mkdir sfdx
             # Download Salesforce CLI
             wget -qO- ${DX_CLI_URL_CUSTOM-$DX_CLI_URL} | tar xJ -C ~/sfdx --strip-components 1
       - run:
