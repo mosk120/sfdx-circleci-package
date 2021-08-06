@@ -10,11 +10,11 @@ jobs:
     - TESTLEVEL: RunLocalTests
     steps: 
       - checkout
-      - run:
-          name: "Create SFDX Folder"
-          command: |
-            # Create sfdx directory
-            mkdir ~/sfdx
+#      - run:
+#          name: "Create SFDX Folder"
+#          command: |
+#            # Create sfdx directory
+#            mkdir ~/sfdx
       - run:
           name: Download CLI
           command: |
