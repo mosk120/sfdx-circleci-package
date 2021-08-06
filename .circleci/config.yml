@@ -10,16 +10,16 @@ jobs:
     - TESTLEVEL: RunLocalTests
     steps: 
       - checkout
-#      - run:
-#          name: "Create SFDX Folder"
-#          command: |
-#            # Create sfdx directory
-#            mkdir ~/sfdx
+      - run:
+          name: "Create SFDX Folder"
+          command: |
+            # Create sfdx directory
+            mkdir ~/sfdx
       - run:
           name: Download CLI
           command: |
             # Create sfdx directory
-
+            mkdir sfdx
             # Download Salesforce CLI
             wget -qO- ${DX_CLI_URL_CUSTOM-$DX_CLI_URL} | tar xJ -C ~/sfdx --strip-components 1
       - run:
